@@ -79,6 +79,7 @@ public class Add_Nationality {
 	
 
 		System.out.println("AFTER CLICKING ON SAVE IN THE ELSE CONDITION");
+		System.out.println("TEST");
 
 	}
 
