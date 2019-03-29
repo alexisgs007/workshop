@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.OrangeHRMLoginPage;
 import utility.constant;
 
-public class LoginOrangeHRM {
+public class LoginOrangeHRMTest {
 	
 	private static WebDriver driver = null;
 	

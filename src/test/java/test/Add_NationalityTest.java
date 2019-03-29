@@ -2,21 +2,23 @@ package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
-
 import pages.OrangeHRMHomePage;
 import pages.OrangeHRMLoginPage;
 import utility.constant;
 
-public class Delete_Nationality {
+public class Add_NationalityTest {
 
 	private static WebDriver driver = null;
+	private static String nationality = "Wakandan";
 
 	@BeforeTest
 	public void setUp() {
@@ -28,10 +30,10 @@ public class Delete_Nationality {
 	}
 
 	@Test
-	public static void delete_nationality(){
+	public static void add_nationality() {
 		
-		Logger LOGGER = Logger.getLogger(Delete_Nationality.class);
-		
+		Logger LOGGER = Logger.getLogger(Add_NationalityTest.class);
+
 		//Logging in 
 		driver.get(constant.URL);
 		OrangeHRMLoginPage.textbox_username(driver).sendKeys(constant.Username);
@@ -42,33 +44,45 @@ public class Delete_Nationality {
 		//Moving to the Nationality sub-menu
 		OrangeHRMHomePage.menu_admin(driver).click();
 		OrangeHRMHomePage.submenu_nationality(driver).click();
+		OrangeHRMHomePage.button_add(driver).click();
+		OrangeHRMHomePage.textbox_nationality_name(driver).sendKeys(nationality);
+
+		//Verify if nationality already exists
+		LOGGER.error("Before wait condition");
 		
-		//Waiting for the table to appear
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("resultTable")));
+		WebElement alreadyExists = null;
 		
 		try {
-
-			//Search for the record and delete 
-			String actualNationality = driver.findElement(By.xpath("//table[@id='resultTable']/tbody//a[text()='Wakandan']")).getText();
-			LOGGER.error("TEXT FROM TABLE" +actualNationality);
 			
-			//Clicking the checkbox and selecting "Wakandan"
-			driver.findElement(By.xpath("//table[@id='resultTable']/tbody//a[text()='Wakandan']/../../td//input")).click();
-			LOGGER.error("CLICKING THE CHECKBOX");
-			
-			//clicking the delete button and confirming deletion
-			OrangeHRMHomePage.button_delete(driver).click();
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("deleteConfModal")));
-			OrangeHRMHomePage.button_confirm(driver).click();
-			
-		}catch(Exception e) {
-			
-			LOGGER.error("PROBLEM FINDING ELEMENT IN DOM");
+			WebDriverWait wait = new WebDriverWait(driver, 15);
+			alreadyExists = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@id='frmNationality']/fieldset/ol/li[1]/span")));
+			LOGGER.error("ALREADY EXISTS: " +alreadyExists.getText());
 			
 		}
-	}
+		catch(Exception e) {
+			LOGGER.error("ELEMENT NOT FOUND");
+		}
+		
+		
+		if(alreadyExists!=null) {
+			
+			Assert.assertTrue(true, "ALREADY EXISTS");
+			LOGGER.error("NOT SAVED");
+
+		}
+		else {
+			
+			LOGGER.error("ELSE STATEMENT");
+			OrangeHRMHomePage.button_save(driver).click();
+			
+		}
 	
+
+		System.out.println("AFTER CLICKING ON SAVE IN THE ELSE CONDITION");
+		System.out.println("TEST");
+
+	}
+
 	@AfterTest
 	public void tearDown() {
 

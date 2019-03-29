@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel= "false" name="Suite1">
-  <test name="Test1" thread-count="1" parallel="false">
+<suite parallel= "classes" name="Suite1">
+  <test name="Test1" thread-count="5">
     <classes>
-      <class name="test.LoginOrangeHRM"/>
-      <class name="test.Add_Nationality"/>
-      <class name="test.Delete_Nationality"/>
+      <class name="test.LoginOrangeHRMTest"/>
+      <class name="test.Add_NationalityTest"/>
+      <class name="test.Delete_NationalityTest"/>
     </classes>
   </test> <!-- Test1 -->
 </suite> <!-- Suite1 -->
