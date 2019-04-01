@@ -48,7 +48,7 @@ public class Add_NationalityTest {
 		OrangeHRMHomePage.textbox_nationality_name(driver).sendKeys(nationality);
 
 		//Verify if nationality already exists
-		LOGGER.error("Before wait condition");
+		LOGGER.info("Before wait condition");
 		
 		WebElement alreadyExists = null;
 		
@@ -56,31 +56,27 @@ public class Add_NationalityTest {
 			
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 			alreadyExists = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@id='frmNationality']/fieldset/ol/li[1]/span")));
-			LOGGER.error("ALREADY EXISTS: " +alreadyExists.getText());
+			LOGGER.info("ALREADY EXISTS: " +alreadyExists.getText());
 			
 		}
 		catch(Exception e) {
-			LOGGER.error("ELEMENT NOT FOUND");
+			LOGGER.info("ELEMENT NOT FOUND");
 		}
 		
 		
 		if(alreadyExists!=null) {
 			
 			Assert.assertTrue(true, "ALREADY EXISTS");
-			LOGGER.error("NOT SAVED");
+			LOGGER.info("NOT SAVED");
 
 		}
 		else {
 			
-			LOGGER.error("ELSE STATEMENT");
+			LOGGER.info("ELSE STATEMENT");
 			OrangeHRMHomePage.button_save(driver).click();
 			
 		}
 	
-
-		System.out.println("AFTER CLICKING ON SAVE IN THE ELSE CONDITION");
-		System.out.println("TEST");
-
 	}
 
 	@AfterTest

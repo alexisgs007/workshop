@@ -51,11 +51,11 @@ public class Delete_NationalityTest {
 
 			//Search for the record and delete 
 			String actualNationality = driver.findElement(By.xpath("//table[@id='resultTable']/tbody//a[text()='Wakandan']")).getText();
-			LOGGER.error("TEXT FROM TABLE" +actualNationality);
+			LOGGER.info("TEXT FROM TABLE" +actualNationality);
 			
 			//Clicking the checkbox and selecting "Wakandan"
 			driver.findElement(By.xpath("//table[@id='resultTable']/tbody//a[text()='Wakandan']/../../td//input")).click();
-			LOGGER.error("CLICKING THE CHECKBOX");
+			LOGGER.info("CLICKING THE CHECKBOX");
 			
 			//clicking the delete button and confirming deletion
 			OrangeHRMHomePage.button_delete(driver).click();
@@ -64,7 +64,7 @@ public class Delete_NationalityTest {
 			
 		}catch(Exception e) {
 			
-			LOGGER.error("PROBLEM FINDING ELEMENT IN DOM");
+			LOGGER.info("PROBLEM FINDING ELEMENT IN DOM");
 			
 		}
 	}

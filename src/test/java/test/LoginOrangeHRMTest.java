@@ -33,8 +33,7 @@ public class LoginOrangeHRMTest {
 		OrangeHRMLoginPage.button_login(driver).click();
 		System.out.println("already logged in");
 		
-		System.out.println(driver.getTitle().trim());
-		AssertJUnit.assertEquals("LOGIN PAGE", title, driver.getTitle().trim());
+		AssertJUnit.assertEquals("LOGIN SUCCESSFUL", title, driver.getTitle().trim());
 		
 	}
 	
