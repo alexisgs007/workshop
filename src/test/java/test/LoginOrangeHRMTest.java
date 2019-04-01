@@ -2,6 +2,7 @@ package test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,6 +13,7 @@ import utility.constant;
 public class LoginOrangeHRMTest {
 	
 	private static WebDriver driver = null;
+	private static String title = "OrangeHRM";
 	
 	@BeforeTest
 	public void setUp() {
@@ -30,6 +32,9 @@ public class LoginOrangeHRMTest {
 		OrangeHRMLoginPage.textbox_password(driver).sendKeys(constant.Password);
 		OrangeHRMLoginPage.button_login(driver).click();
 		System.out.println("already logged in");
+		
+		System.out.println(driver.getTitle().trim());
+		AssertJUnit.assertEquals("LOGIN PAGE", title, driver.getTitle().trim());
 		
 	}
 	
