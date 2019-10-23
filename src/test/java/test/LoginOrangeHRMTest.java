@@ -35,7 +35,7 @@ public class LoginOrangeHRMTest {
 		System.out.println("already logged in");
 		
 		AssertJUnit.assertEquals("LOGIN SUCCESSFUL", title, driver.getTitle().trim());
-		System.out.println("PUSHING THIS CHANGE");
+//		System.out.println("PUSHING THIS CHANGE");
 		
 	}
 	
