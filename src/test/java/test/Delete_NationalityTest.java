@@ -34,6 +34,7 @@ public class Delete_NationalityTest {
 		
 		//Logging in 
 		driver.get(constant.URL);
+		driver.manage().window().maximize();
 		OrangeHRMLoginPage.textbox_username(driver).sendKeys(constant.Username);
 		OrangeHRMLoginPage.textbox_password(driver).sendKeys(constant.Password);
 		OrangeHRMLoginPage.button_login(driver).click();

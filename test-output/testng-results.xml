@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11899" started-at="2019-06-27T15:20:47Z" finished-at="2019-06-27T15:20:58Z">
+  <suite name="Suite1" duration-ms="56853" started-at="2019-10-23T20:51:49Z" finished-at="2019-10-23T20:52:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11899" started-at="2019-06-27T15:20:47Z" finished-at="2019-06-27T15:20:58Z">
-      <class name="test.Delete_NationalityTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="setUp" is-config="true" duration-ms="3724" started-at="2019-06-27T15:20:47Z" finished-at="2019-06-27T15:20:50Z">
+    <test name="Test1" duration-ms="56853" started-at="2019-10-23T20:51:49Z" finished-at="2019-10-23T20:52:46Z">
+      <class name="test.LoginOrangeHRMTest">
+        <test-method status="PASS" signature="login()[pri:0, instance:test.LoginOrangeHRMTest@4b9e13df]" name="login" duration-ms="25151" started-at="2019-10-23T20:51:59Z" finished-at="2019-10-23T20:52:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="delete_nationality()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="delete_nationality" duration-ms="7415" started-at="2019-06-27T15:20:50Z" finished-at="2019-06-27T15:20:58Z">
+        </test-method> <!-- login -->
+      </class> <!-- test.LoginOrangeHRMTest -->
+      <class name="test.Delete_NationalityTest">
+        <test-method status="PASS" signature="delete_nationality()[pri:0, instance:test.Delete_NationalityTest@475530b9]" name="delete_nationality" duration-ms="24691" started-at="2019-10-23T20:51:59Z" finished-at="2019-10-23T20:52:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete_nationality -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="tearDown" is-config="true" duration-ms="743" started-at="2019-06-27T15:20:58Z" finished-at="2019-06-27T15:20:58Z">
+      </class> <!-- test.Delete_NationalityTest -->
+      <class name="test.Add_NationalityTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.Add_NationalityTest@2b98378d]" name="setUp" is-config="true" duration-ms="5311" started-at="2019-10-23T20:51:49Z" finished-at="2019-10-23T20:51:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.Delete_NationalityTest@475530b9]" name="setUp" is-config="true" duration-ms="2353" started-at="2019-10-23T20:51:54Z" finished-at="2019-10-23T20:51:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.LoginOrangeHRMTest@4b9e13df]" name="setUp" is-config="true" duration-ms="2450" started-at="2019-10-23T20:51:56Z" finished-at="2019-10-23T20:51:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="add_nationality()[pri:0, instance:test.Add_NationalityTest@2b98378d]" name="add_nationality" duration-ms="44436" started-at="2019-10-23T20:51:59Z" finished-at="2019-10-23T20:52:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_nationality -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.Add_NationalityTest@2b98378d]" name="tearDown" is-config="true" duration-ms="752" started-at="2019-10-23T20:52:43Z" finished-at="2019-10-23T20:52:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.Delete_NationalityTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.Delete_NationalityTest@475530b9]" name="tearDown" is-config="true" duration-ms="706" started-at="2019-10-23T20:52:44Z" finished-at="2019-10-23T20:52:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.LoginOrangeHRMTest@4b9e13df]" name="tearDown" is-config="true" duration-ms="802" started-at="2019-10-23T20:52:45Z" finished-at="2019-10-23T20:52:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.Add_NationalityTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite1 -->
 </testng-results>
