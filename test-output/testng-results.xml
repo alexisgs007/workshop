@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10422" started-at="2019-11-06T16:45:54Z" finished-at="2019-11-06T16:46:05Z">
+  <suite name="Default suite" duration-ms="11599" started-at="2019-11-11T18:30:11Z" finished-at="2019-11-11T18:30:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10422" started-at="2019-11-06T16:45:54Z" finished-at="2019-11-06T16:46:05Z">
+    <test name="Default test" duration-ms="11599" started-at="2019-11-11T18:30:11Z" finished-at="2019-11-11T18:30:23Z">
       <class name="test.Delete_NationalityTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="setUp" is-config="true" duration-ms="3819" started-at="2019-11-06T16:45:54Z" finished-at="2019-11-06T16:45:58Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="setUp" is-config="true" duration-ms="3682" started-at="2019-11-11T18:30:11Z" finished-at="2019-11-11T18:30:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="delete_nationality()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="delete_nationality" duration-ms="5795" started-at="2019-11-06T16:45:58Z" finished-at="2019-11-06T16:46:04Z">
+        <test-method status="PASS" signature="delete_nationality()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="delete_nationality" duration-ms="6305" started-at="2019-11-11T18:30:15Z" finished-at="2019-11-11T18:30:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete_nationality -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="tearDown" is-config="true" duration-ms="787" started-at="2019-11-06T16:46:04Z" finished-at="2019-11-06T16:46:05Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="tearDown" is-config="true" duration-ms="1592" started-at="2019-11-11T18:30:21Z" finished-at="2019-11-11T18:30:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
