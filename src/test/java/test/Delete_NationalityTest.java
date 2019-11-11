@@ -66,6 +66,7 @@ public class Delete_NationalityTest {
 		}catch(Exception e) {
 			
 			LOGGER.info("PROBLEM FINDING ELEMENT IN DOM");
+			System.out.println("TEST");
 			
 		}
 	}
