@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11599" started-at="2019-11-11T18:30:11Z" finished-at="2019-11-11T18:30:23Z">
+  <suite name="Default suite" duration-ms="8364" started-at="2020-02-19T22:33:04Z" finished-at="2020-02-19T22:33:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11599" started-at="2019-11-11T18:30:11Z" finished-at="2019-11-11T18:30:23Z">
-      <class name="test.Delete_NationalityTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="setUp" is-config="true" duration-ms="3682" started-at="2019-11-11T18:30:11Z" finished-at="2019-11-11T18:30:15Z">
+    <test name="Default test" duration-ms="8364" started-at="2020-02-19T22:33:04Z" finished-at="2020-02-19T22:33:12Z">
+      <class name="test.LoginOrangeHRMTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.LoginOrangeHRMTest@18be83e4]" name="setUp" is-config="true" duration-ms="3046" started-at="2020-02-19T22:33:04Z" finished-at="2020-02-19T22:33:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="delete_nationality()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="delete_nationality" duration-ms="6305" started-at="2019-11-11T18:30:15Z" finished-at="2019-11-11T18:30:21Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:test.LoginOrangeHRMTest@18be83e4]" name="login" duration-ms="4617" started-at="2020-02-19T22:33:07Z" finished-at="2020-02-19T22:33:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- delete_nationality -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.Delete_NationalityTest@18be83e4]" name="tearDown" is-config="true" duration-ms="1592" started-at="2019-11-11T18:30:21Z" finished-at="2019-11-11T18:30:23Z">
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.LoginOrangeHRMTest@18be83e4]" name="tearDown" is-config="true" duration-ms="677" started-at="2020-02-19T22:33:11Z" finished-at="2020-02-19T22:33:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- test.Delete_NationalityTest -->
+      </class> <!-- test.LoginOrangeHRMTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
